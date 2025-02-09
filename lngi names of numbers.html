@@ -12,7 +12,7 @@ Max number of digits before switching to scientific (min: 10, max: 308): <input 
 <button onclick="minus1min()">Rewind 1 minute</button>
 <button onclick="plus1h()">Fast forward 1 hour</button>
 <button onclick="minus1h()">Rewind 1 hour</button>
-<button onclick="speedDouble()">Speed x2</button>
+<button onclick="speedDouble()">Speed x4</button>
 <button onclick="speedHalf()">Speed /2</button>
 
 <p><font face="arial" size="5" id="number2"></font>
@@ -470,7 +470,7 @@ function tier4number(loglogloglogNum) {
 }
 function valueNumber(t) {
 	var x = 10*(t+1e5)**0.8-1e5;
-	if (!(document.getElementById("fps60").checked)) {
+	if (!(document.getElementById("fps80").checked)) {
 		x = 10*(Math.floor(t/5/speedMultiplier)*5*speedMultiplier+1e5)**0.8-1e5;
 	}
 	if (x < 30000) {
