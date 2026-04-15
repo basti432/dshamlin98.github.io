@@ -9,6 +9,7 @@ Running: <input type="checkbox" id="numberRunning" checked></input>
 <button onclick="func3()">/4 Speed</button>
 <button onclick="func4()">Increase precision</button>
 <button onclick="func5()">Decrease precision</button>
+<button onclick="reverseSpeed()">Reverse</button>
 <p>NUMBER:<br><font size="5" id="number"></font></p>
 <script>
 var t=0;
@@ -215,11 +216,12 @@ setInterval(displayNumber, 15);
 setInterval(save, 100);
 function func1() {t=0}
 function func2() {tStep*=2}
-function func2() {tStep*=4}
-function func3() {tStep/=2}
-function func3() {tStep/=4}
-function func4() {maxPrecisionDigits+=1}
-function func5() {maxPrecisionDigits-=1}
+function func3() {tStep*=4}
+function func4() {tStep/=2}
+function func5() {tStep/=4}
+function func6() {maxPrecisionDigits+=1}
+function func7() {maxPrecisionDigits-=1}
+function func8() {document.getElementById("speedMult").value *= -1}
 
 </script>
 </body>
